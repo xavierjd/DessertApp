@@ -11,6 +11,7 @@ These are some the key features that this App benefits
 - ✅ Concurrency
 - ✅ File System to cache Images
 - ✅ CoreData to persiste data
+- ✅ Dependency Injection 
 - ✅ Unit Testing
 - ✅ MVVM Architecture 
 

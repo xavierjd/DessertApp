@@ -9,34 +9,25 @@ import Foundation
 import Combine
 
 protocol AllDessertsDataProtocol {
-    func getData() -> AnyPublisher<DessertModel, Error>
+    func getData() throws -> AnyPublisher<DessertModel, Error>
 }
 
-enum NetworkingError: LocalizedError {
-    case badURLResponse(from: URL)
-    case unknown
-    
-    var errorDescription: String?{
-        switch self {
-        case .badURLResponse(from: let url): return " Bad response from URL: \(url)"
-        case .unknown: return "Unknown error occured"
-            
-        }
-    }
-}
+
 
 class DessertDataService: AllDessertsDataProtocol {
-    let url  = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!
-
-    func getData() -> AnyPublisher<DessertModel, Error> {
-
-        URLSession.shared.dataTaskPublisher(for: url)
-            .map({$0.data})
-            .decode(type: DessertModel.self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
-            .eraseToAnyPublisher()
-
-    }
     
-
+    func getData() throws -> AnyPublisher<DessertModel, Error> {
+        
+        guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else { throw  NetworkingError.invalidURL }
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap({ data in
+                guard let response = data.response as? HTTPURLResponse, response.statusCode >= 200 && response.statusCode < 300 else{
+                    throw NetworkingError.badURLResponse(from: url)
+                }
+                return data.data
+            })
+            .decode(type: DessertModel.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+    }
 }

@@ -135,12 +135,14 @@ struct DetailModel: Codable, Hashable {
         ]
     }
     
-    private func addIngredientsValues(measure: String?, ingredient: String? ) -> IngredientModel {
-        
-        if (measure == "") || (measure == nil) || (ingredient == "") || (ingredient == nil) {
-            return IngredientModel(ingredient: nil)
+    func addIngredientsValues(measure: String?, ingredient: String? ) -> IngredientModel {
+        if let measure = measure,
+           let ingredient = ingredient,
+           measure != "",
+           ingredient != "" {
+            return IngredientModel(ingredient: "•" + " " + measure + " " + ingredient)
         } else {
-            return IngredientModel(ingredient: "•" + " " + measure! + " " + ingredient!)
+            return IngredientModel(ingredient: nil)
         }
     }
     

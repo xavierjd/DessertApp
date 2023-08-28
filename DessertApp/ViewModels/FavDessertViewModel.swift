@@ -2,7 +2,7 @@
 //  FavDessertViewModel.swift
 //  DessertApp
 //
-//  Created by xavier on 25/08/23.
+//  Created by xavier on 26/08/23.
 //
 
 import Foundation
@@ -18,7 +18,7 @@ class FavDessertViewModel: ObservableObject {
     }
     
     func isInFavList() -> Bool {
-        if favDessertService.existInFavDessert(dessert: dessert) {
+        if favDessertService.isSaved(dessert: dessert) {
             return true
         } else {
             return false
@@ -26,10 +26,6 @@ class FavDessertViewModel: ObservableObject {
     }
     
     func updateFavList() {
-        favDessertService.updateFavoriteDesserts(dessert: dessert)
+        favDessertService.update(dessert: dessert)
     }
-    
-    
-    
-    
 }

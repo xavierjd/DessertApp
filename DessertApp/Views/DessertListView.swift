@@ -51,7 +51,7 @@ struct DessertListView: View {
                 }
             }
         }
-        .navigationTitle(Text("🧁 World Desserts"))
+        .navigationTitle(Text("🧁 Dessert Recipes"))
         .navigationDestination(for: DessertData.self) { dessert in
             DessertDetailView(
                 dessert: dessert,

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class MockDessertDetailData: DessertDetailDataProtocol {
-    let testData =
+    static let testData =
     DessertDetailModel(
         meals: [
             DetailModel(
@@ -64,7 +64,7 @@ class MockDessertDetailData: DessertDetailDataProtocol {
         ])
     
     func getDessertDetails(dessert: DessertData) -> AnyPublisher<DessertDetailModel, Error> {
-        Just(testData)
+        Just(MockDessertDetailData.testData)
             .tryMap({$0})
             .eraseToAnyPublisher()
     }

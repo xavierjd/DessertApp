@@ -16,32 +16,27 @@ class DessertListViewModel: ObservableObject {
     
     init(networkService: AllDessertsDataProtocol) {
         self.networkService = networkService
-       loadDesserts()
+        loadDesserts()
     }
     
     private func loadDesserts() {
-        networkService.getData().sink(receiveCompletion: { completion in
-            switch completion {
-            case .finished:
-                break
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }, receiveValue: { [weak self] returnedDesserts in
-            self?.desserts = returnedDesserts
-        })
-        .store(in: &cancellables)
+        do {
+            try networkService.getData()
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }, receiveValue: { [weak self] returnedDesserts in
+                    self?.desserts = returnedDesserts
+                })
+                .store(in: &cancellables)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
     }
-    
-//    func isInFavDesserts(dessertID: String) -> Bool {
-//        if favoriteDessertService.existInFavDessert(id: dessertID) {
-//            return true
-//        } else {
-//            return false
-//        }
-//    }
-//
-//    func updateFavDessert(id: String){
-//        favoriteDessertService.updateFavoriteDesserts(id: id)
-//    }
 }

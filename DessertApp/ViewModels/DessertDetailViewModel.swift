@@ -22,17 +22,25 @@ class DessertDetailViewModel: ObservableObject {
     }
     
     private func loadDessertDetails(dessert: DessertData) {
-        networkService.getDessertDetails(dessert: dessert).sink(receiveCompletion: { completion in
-            switch completion {
-            case .finished:
-                break
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }, receiveValue: { [weak self] returnedDessertDetails in
-            self?.dessertDetails = returnedDessertDetails
-        })
-        .store(in: &cancellables)
+        
+        do {
+            try networkService.getDessertDetails(dessert: dessert)
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }, receiveValue: { [weak self] returnedDessertDetails in
+                self?.dessertDetails = returnedDessertDetails
+            })
+            .store(in: &cancellables)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
     }
     
     

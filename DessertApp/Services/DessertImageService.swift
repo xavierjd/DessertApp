@@ -15,7 +15,7 @@ protocol DessertImageProtocol {
 class DessertImageService: DessertImageProtocol {
     
     func downloadDessertImage(dessert: DessertData) async throws -> UIImage? {
-        let url = URL(string: dessert.imageUrl)!
+        guard let url = URL(string: dessert.imageUrl) else { throw NetworkingError.invalidURL }
         do {
             let (data, response) = try await URLSession.shared.data(from: url)
             

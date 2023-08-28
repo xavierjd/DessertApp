@@ -19,14 +19,14 @@ class FavoriteDessertService {
         container =  NSPersistentContainer(name: containerName)
         container.loadPersistentStores { _, error in
             if let error = error {
-                print("Error loading Core Data! \(error)")
+                print("Error loading Core Data \(error)")
             }
             self.getFavoriteDesserts()
         }
     }
     
     // MARK: PUBLIC
-    func updateFavoriteDesserts(dessert: DessertData){
+    func update(dessert: DessertData){
         if let entity = favoriteDesserts.first(where: { $0.dessertID == dessert.id }) {
                 delete(entity: entity)
         } else {
@@ -34,7 +34,7 @@ class FavoriteDessertService {
         }
     }
     
-    func existInFavDessert(dessert: DessertData) -> Bool {
+    func isSaved(dessert: DessertData) -> Bool {
         if favoriteDesserts.first(where: { $0.dessertID == dessert.id }) != nil {
             return true
         } else {

@@ -23,6 +23,8 @@
 		51488ACC2A9971B900003245 /* FavoritesContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51488ACA2A9971B900003245 /* FavoritesContainer.xcdatamodeld */; };
 		51488ACE2A99830100003245 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51488ACD2A99830100003245 /* HeartView.swift */; };
 		5167EC372A99B8F000491AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5167EC362A99B8F000491AE0 /* LaunchScreen.storyboard */; };
+		5169BC762A9A6C1600AE347A /* FavDessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169BC752A9A6C1600AE347A /* FavDessertViewModel.swift */; };
+		5169BC782A9A75AE00AE347A /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169BC772A9A75AE00AE347A /* NetworkingError.swift */; };
 		5179E0B52A981BF3006F19F1 /* DessertDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179E0B42A981BF3006F19F1 /* DessertDetailService.swift */; };
 		5179E0B72A982122006F19F1 /* DessertDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179E0B62A982122006F19F1 /* DessertDetailViewModel.swift */; };
 		5191849F2A993B9E002E3F20 /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191849E2A993B9E002E3F20 /* ImageFileManager.swift */; };
@@ -30,7 +32,6 @@
 		519D7A312A9882AC0083FFC5 /* DessertImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D7A302A9882AC0083FFC5 /* DessertImageView.swift */; };
 		519D7A352A9882FF0083FFC5 /* DessertImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D7A342A9882FF0083FFC5 /* DessertImageViewModel.swift */; };
 		519D7A372A9894FA0083FFC5 /* DessertImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D7A362A9894FA0083FFC5 /* DessertImageService.swift */; };
-		519E65112A99933900E90FBE /* FavDessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519E65102A99933900E90FBE /* FavDessertViewModel.swift */; };
 		51C8A05B2A980FD8006ECB1B /* DessertDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8A05A2A980FD8006ECB1B /* DessertDetailView.swift */; };
 		51DF182D2A97CD91004E1AD0 /* DessertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DF182C2A97CD91004E1AD0 /* DessertApp.swift */; };
 		51DF18312A97CD95004E1AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51DF18302A97CD95004E1AD0 /* Assets.xcassets */; };
@@ -75,6 +76,8 @@
 		51488ACD2A99830100003245 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
 		5167EC352A99B89E00491AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5167EC362A99B8F000491AE0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5169BC752A9A6C1600AE347A /* FavDessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavDessertViewModel.swift; sourceTree = "<group>"; };
+		5169BC772A9A75AE00AE347A /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		5179E0B42A981BF3006F19F1 /* DessertDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailService.swift; sourceTree = "<group>"; };
 		5179E0B62A982122006F19F1 /* DessertDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailViewModel.swift; sourceTree = "<group>"; };
 		5191849E2A993B9E002E3F20 /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		519D7A302A9882AC0083FFC5 /* DessertImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertImageView.swift; sourceTree = "<group>"; };
 		519D7A342A9882FF0083FFC5 /* DessertImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertImageViewModel.swift; sourceTree = "<group>"; };
 		519D7A362A9894FA0083FFC5 /* DessertImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertImageService.swift; sourceTree = "<group>"; };
-		519E65102A99933900E90FBE /* FavDessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavDessertViewModel.swift; sourceTree = "<group>"; };
 		51C8A05A2A980FD8006ECB1B /* DessertDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailView.swift; sourceTree = "<group>"; };
 		51DF18292A97CD91004E1AD0 /* DessertApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DessertApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DF182C2A97CD91004E1AD0 /* DessertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertApp.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		5133DE0F2A97D30A00AAE534 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5169BC772A9A75AE00AE347A /* NetworkingError.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -145,6 +148,15 @@
 				5191849E2A993B9E002E3F20 /* ImageFileManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		51C23DFE2A9A936A008FC2A0 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				5133DE182A97DEBF00AAE534 /* MockDessertData.swift */,
+				51419B342A98053A0077CC68 /* MockDessertDetailData.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		51DF18202A97CD91004E1AD0 = {
@@ -170,6 +182,7 @@
 		51DF182B2A97CD91004E1AD0 /* DessertApp */ = {
 			isa = PBXGroup;
 			children = (
+				51C23DFE2A9A936A008FC2A0 /* MockData */,
 				5167EC352A99B89E00491AE0 /* Info.plist */,
 				519D7A2D2A98676D0083FFC5 /* Utilities */,
 				5133DE0F2A97D30A00AAE534 /* Extensions */,
@@ -216,8 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				5133DE162A97D92A00AAE534 /* DessertDataService.swift */,
-				5133DE182A97DEBF00AAE534 /* MockDessertData.swift */,
-				51419B342A98053A0077CC68 /* MockDessertDetailData.swift */,
 				5179E0B42A981BF3006F19F1 /* DessertDetailService.swift */,
 				519D7A362A9894FA0083FFC5 /* DessertImageService.swift */,
 				51488AC82A99710500003245 /* FavoriteDessertsService.swift */,
@@ -231,7 +242,7 @@
 				5133DE122A97D48A00AAE534 /* DessertListViewModel.swift */,
 				5179E0B62A982122006F19F1 /* DessertDetailViewModel.swift */,
 				519D7A342A9882FF0083FFC5 /* DessertImageViewModel.swift */,
-				519E65102A99933900E90FBE /* FavDessertViewModel.swift */,
+				5169BC752A9A6C1600AE347A /* FavDessertViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -239,6 +250,8 @@
 		51DF18582A97CE9D004E1AD0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				51488ACD2A99830100003245 /* HeartView.swift */,
+				519D7A302A9882AC0083FFC5 /* DessertImageView.swift */,
 				5133DE102A97D3B500AAE534 /* DessertListView.swift */,
 				51C8A05A2A980FD8006ECB1B /* DessertDetailView.swift */,
 				5167EC362A99B8F000491AE0 /* LaunchScreen.storyboard */,
@@ -259,8 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				519D7A2E2A9868CE0083FFC5 /* IngredientView.swift */,
-				519D7A302A9882AC0083FFC5 /* DessertImageView.swift */,
-				51488ACD2A99830100003245 /* HeartView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -408,9 +419,10 @@
 				5133DE172A97D92A00AAE534 /* DessertDataService.swift in Sources */,
 				519D7A372A9894FA0083FFC5 /* DessertImageService.swift in Sources */,
 				5133DE152A97D55300AAE534 /* DessertModel.swift in Sources */,
-				519E65112A99933900E90FBE /* FavDessertViewModel.swift in Sources */,
+				5169BC762A9A6C1600AE347A /* FavDessertViewModel.swift in Sources */,
 				5133DE112A97D3B500AAE534 /* DessertListView.swift in Sources */,
 				5133DE132A97D48A00AAE534 /* DessertListViewModel.swift in Sources */,
+				5169BC782A9A75AE00AE347A /* NetworkingError.swift in Sources */,
 				519D7A2F2A9868CE0083FFC5 /* IngredientView.swift in Sources */,
 				51419B332A9802350077CC68 /* DessertDetailModel.swift in Sources */,
 				51488ACC2A9971B900003245 /* FavoritesContainer.xcdatamodeld in Sources */,
@@ -583,7 +595,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DessertApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "World Desserts";
+				INFOPLIST_KEY_CFBundleDisplayName = "Desserts Recipes";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -616,7 +628,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DessertApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "World Desserts";
+				INFOPLIST_KEY_CFBundleDisplayName = "Desserts Recipes";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

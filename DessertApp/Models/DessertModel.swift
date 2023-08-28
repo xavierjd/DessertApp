@@ -12,6 +12,7 @@ struct DessertModel: Codable, Hashable {
 }
 
 struct DessertData: Codable, Identifiable, Hashable {
+    
     let id: String
     let name: String
     let imageUrl: String
@@ -21,6 +22,5 @@ struct DessertData: Codable, Identifiable, Hashable {
         case name = "strMeal"
         case imageUrl = "strMealThumb"
     }
-    
 }
 

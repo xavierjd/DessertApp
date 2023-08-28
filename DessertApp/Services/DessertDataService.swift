@@ -12,8 +12,6 @@ protocol AllDessertsDataProtocol {
     func getData() throws -> AnyPublisher<DessertModel, Error>
 }
 
-
-
 class DessertDataService: AllDessertsDataProtocol {
     
     func getData() throws -> AnyPublisher<DessertModel, Error> {

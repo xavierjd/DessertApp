@@ -22,9 +22,9 @@
 		51488AC92A99710500003245 /* FavoriteDessertsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51488AC82A99710500003245 /* FavoriteDessertsService.swift */; };
 		51488ACC2A9971B900003245 /* FavoritesContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51488ACA2A9971B900003245 /* FavoritesContainer.xcdatamodeld */; };
 		51488ACE2A99830100003245 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51488ACD2A99830100003245 /* HeartView.swift */; };
+		51631C912A9C456100CABA9A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51631C902A9C456100CABA9A /* NetworkError.swift */; };
 		5167EC372A99B8F000491AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5167EC362A99B8F000491AE0 /* LaunchScreen.storyboard */; };
 		5169BC762A9A6C1600AE347A /* FavDessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169BC752A9A6C1600AE347A /* FavDessertViewModel.swift */; };
-		5169BC782A9A75AE00AE347A /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169BC772A9A75AE00AE347A /* NetworkingError.swift */; };
 		5179E0B52A981BF3006F19F1 /* DessertDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179E0B42A981BF3006F19F1 /* DessertDetailService.swift */; };
 		5179E0B72A982122006F19F1 /* DessertDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179E0B62A982122006F19F1 /* DessertDetailViewModel.swift */; };
 		5191849F2A993B9E002E3F20 /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191849E2A993B9E002E3F20 /* ImageFileManager.swift */; };
@@ -74,10 +74,10 @@
 		51488AC82A99710500003245 /* FavoriteDessertsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDessertsService.swift; sourceTree = "<group>"; };
 		51488ACB2A9971B900003245 /* FavoritesContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoritesContainer.xcdatamodel; sourceTree = "<group>"; };
 		51488ACD2A99830100003245 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		51631C902A9C456100CABA9A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		5167EC352A99B89E00491AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5167EC362A99B8F000491AE0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5169BC752A9A6C1600AE347A /* FavDessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavDessertViewModel.swift; sourceTree = "<group>"; };
-		5169BC772A9A75AE00AE347A /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		5179E0B42A981BF3006F19F1 /* DessertDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailService.swift; sourceTree = "<group>"; };
 		5179E0B62A982122006F19F1 /* DessertDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailViewModel.swift; sourceTree = "<group>"; };
 		5191849E2A993B9E002E3F20 /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
@@ -122,14 +122,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5133DE0F2A97D30A00AAE534 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				5169BC772A9A75AE00AE347A /* NetworkingError.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		51419B272A97FF1B0077CC68 /* MockImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +132,14 @@
 				51419B2B2A97FF440077CC68 /* dessert-5.jpg */,
 			);
 			path = MockImages;
+			sourceTree = "<group>";
+		};
+		51631C8F2A9C454900CABA9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51631C902A9C456100CABA9A /* NetworkError.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		519D7A2D2A98676D0083FFC5 /* Utilities */ = {
@@ -182,10 +182,10 @@
 		51DF182B2A97CD91004E1AD0 /* DessertApp */ = {
 			isa = PBXGroup;
 			children = (
+				51631C8F2A9C454900CABA9A /* Extensions */,
 				51C23DFE2A9A936A008FC2A0 /* MockData */,
 				5167EC352A99B89E00491AE0 /* Info.plist */,
 				519D7A2D2A98676D0083FFC5 /* Utilities */,
-				5133DE0F2A97D30A00AAE534 /* Extensions */,
 				51DF18562A97CE40004E1AD0 /* Services */,
 				51DF185A2A97CF48004E1AD0 /* Components */,
 				51DF18592A97CEAC004E1AD0 /* Models */,
@@ -422,7 +422,6 @@
 				5169BC762A9A6C1600AE347A /* FavDessertViewModel.swift in Sources */,
 				5133DE112A97D3B500AAE534 /* DessertListView.swift in Sources */,
 				5133DE132A97D48A00AAE534 /* DessertListViewModel.swift in Sources */,
-				5169BC782A9A75AE00AE347A /* NetworkingError.swift in Sources */,
 				519D7A2F2A9868CE0083FFC5 /* IngredientView.swift in Sources */,
 				51419B332A9802350077CC68 /* DessertDetailModel.swift in Sources */,
 				51488ACC2A9971B900003245 /* FavoritesContainer.xcdatamodeld in Sources */,
@@ -430,6 +429,7 @@
 				51419B352A98053A0077CC68 /* MockDessertDetailData.swift in Sources */,
 				51488ACE2A99830100003245 /* HeartView.swift in Sources */,
 				5179E0B52A981BF3006F19F1 /* DessertDetailService.swift in Sources */,
+				51631C912A9C456100CABA9A /* NetworkError.swift in Sources */,
 				51C8A05B2A980FD8006ECB1B /* DessertDetailView.swift in Sources */,
 				519D7A312A9882AC0083FFC5 /* DessertImageView.swift in Sources */,
 				51488AC92A99710500003245 /* FavoriteDessertsService.swift in Sources */,
